@@ -7,12 +7,13 @@
 
 using namespace std;
 using namespace cv;
+using namespace chrono;
 
 int main(int argc, char **argv)
 {
         int CAM_ID = 0;
         unsigned int frame_no = 0;
-        unsigned int frame_end = 90;
+        unsigned int frame_end = 300;
         double width = 1920;
         double height = 1080;
         double fps;
@@ -31,7 +32,7 @@ int main(int argc, char **argv)
         namedWindow("CAM_Window", 0);
         resizeWindow("CAM_Window", width, height);
 
-        auto start = chrono::system_clock::now();
+        auto start = system_clock::now();
         while(1) {
                 if (frame_no > frame_end)
                         break;
@@ -43,9 +44,9 @@ int main(int argc, char **argv)
 
                 frame_no++;
         }
-        auto end = chrono::system_clock::now();
+        auto end = system_clock::now();
 
-        std::chrono::duration<double> elapsed_seconds = end - start;
+        duration<double> elapsed_seconds = end - start;
         cout << "elapsed time: " << elapsed_seconds.count() << "s\n";
 
         fps = frame_end / (double)elapsed_seconds.count();
