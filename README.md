@@ -6,7 +6,7 @@
 ## Dependency
  
 * Opencv
-In case of Fedora, to install opencv
+* In case of Fedora, to install opencv
 ```
 sudo dnf install opencv-devel
 ```
