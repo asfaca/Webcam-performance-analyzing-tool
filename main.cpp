@@ -28,19 +28,12 @@ int main(int argc, char **argv)
         cap.set(CV_CAP_PROP_FRAME_WIDTH, width);
         cap.set(CV_CAP_PROP_FRAME_HEIGHT, height);
 
-
-        namedWindow("CAM_Window", 0);
-        resizeWindow("CAM_Window", width, height);
-
         auto start = system_clock::now();
         while(1) {
                 if (frame_no > frame_end)
                         break;
 
                 cap >> frame1;
-                imshow("CAM_Window", frame1);
-                if (waitKey(30) >= 0)
-                        break;
 
                 frame_no++;
         }
@@ -52,6 +45,5 @@ int main(int argc, char **argv)
         fps = frame_end / (double)elapsed_seconds.count();
         cout << "FPS: " << fps << "\n";
 
-        destroyWindow("CAM_Window");
         return 0;
 }
