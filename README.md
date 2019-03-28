@@ -22,6 +22,6 @@ g++ main.cpp -o cv `pkg-config opencv --libs`
 ./cv [width] [height] [camdevid] [frameno]
 ```
 * width : width of video resolution.
-* height : height of vidro resolution.
+* height : height of video resolution.
 * camdevid : camera device id. path=/dev/video[N] and insert N.
 * frameno : the number of frame to capture.
