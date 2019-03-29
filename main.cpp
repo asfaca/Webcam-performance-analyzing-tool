@@ -23,7 +23,7 @@ int main(int argc, char **argv)
                         "Insert [resolution_width] [resolution_height] [camdev_id] [frame_no]\n"
                         "Resolution width : ex, 4096 for 4K video\n"
                         "Resolution height : ex, 2160 for 4K video\n"
-                        "Camdev_id : camera device id. path=/dev/video[N] (N is id)\n"
+                        "Camdev_id : camera device id or path. Ex) \"/dev/video0\" or 0\n"
                         "Frame_no : the number of frame to capture\n");
                 return 0;
         } else if (argc > 5) {
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
                         "Insert [resolution_width] [resolution_height] [camdev_id] [frame_no]\n"
                         "Resolution width : ex, 4096 for 4K video\n"
                         "Resolution height : ex, 2160 for 4K video\n"
-                        "Camdev_id : camera device id. path=/dev/video[N] (N is id)\n"
+                        "Camdev_id : camera device id or path. Ex) \"/dev/video0\" or 0\n"
                         "Frame_no : the number of frame to capture\n");
                 return 0;
         }
